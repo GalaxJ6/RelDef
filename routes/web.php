@@ -18,10 +18,7 @@ Route::get('/', function () {
     return view('estructura');
 });
 
-// Route::get('/estructura', function () {
-//     return view('registroDatos');
-// });
 
-// Route::get('/registroDatos', 'RegistroDatos@registro');
 Route::get('/registroDatos', [RegistroDatos::class, 'registro']);
+// Route::get('/administrador', [RegistroDatos::class, 'index'])->name('administrador.index');
 // Route::get('/estructura', [RegistroDatos::class, 'registro']);
