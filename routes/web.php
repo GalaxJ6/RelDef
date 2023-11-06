@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegistroDatos;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('estructura');
 });
+
+// Route::get('/estructura', function () {
+//     return view('registroDatos');
+// });
+
+// Route::get('/registroDatos', 'RegistroDatos@registro');
+Route::get('/registroDatos', [RegistroDatos::class, 'registro']);
+// Route::get('/estructura', [RegistroDatos::class, 'registro']);
